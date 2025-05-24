@@ -126,7 +126,7 @@ input, .form-control {
 .dark-mode .btn-primary,
 .dark-mode .btn-warning {
   background-color: #FFDC2B;
-  color: #040411;
+  color: #ffffff;
 }
 
 .dark-mode .btn-danger {
@@ -135,4 +135,11 @@ input, .form-control {
 
 .dark-mode .popup-erro {
   background-color: #bb2d3b;
+}
+
+/* ✅ Corrige títulos no modo escuro */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: #F5F5F5 !important;
 }
