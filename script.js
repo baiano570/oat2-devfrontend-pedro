@@ -1,4 +1,4 @@
-let editandoId = null; // ID do usuário em edição
+let editandoId = null; // ID do usuário em edição 
 
 document.getElementById('formCadastro').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -78,11 +78,25 @@ function excluirUsuario(id) {
   mostrarUsuarios();
 }
 
+// --- Modo Escuro com troca de ícone 🌙/☀️ ---
 document.addEventListener('DOMContentLoaded', () => {
   mostrarUsuarios();
 
-  document.getElementById('toggleDarkMode').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+  const toggleBtn = document.getElementById('toggleDarkMode');
+  const body = document.body;
+
+  // Aplica modo escuro salvo anteriormente
+  if (localStorage.getItem('modo') === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  } else {
+    toggleBtn.textContent = '🌙';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const isDark = body.classList.toggle('dark-mode');
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('modo', isDark ? 'dark' : 'light');
   });
 });
 
