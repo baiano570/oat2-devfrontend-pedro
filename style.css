@@ -1,0 +1,138 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F5F5F5;
+  color: #040411;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h2, h3 {
+  color: #373330;
+}
+
+label {
+  font-weight: 600;
+  color: #373330;
+}
+
+input, .form-control {
+  background-color: #ffffff;
+  border: 1px solid #8E8C8B;
+  color: #373330;
+}
+
+.btn-primary {
+  background-color: #FFDC2B;
+  color: #040411;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e6c319;
+  color: #040411;
+}
+
+.btn-warning {
+  background-color: #FFDC2B;
+  border: none;
+  color: #040411;
+}
+
+.btn-warning:hover {
+  background-color: #e6c319;
+  color: #040411;
+}
+
+.btn-danger {
+  background-color: #373330;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #8E8C8B;
+}
+
+.list-group-item {
+  background-color: #ffffff;
+  border: 1px solid #8E8C8B;
+  color: #373330;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* ===================== */
+/*      JANELA DE ERRO   */
+/* ===================== */
+.popup-erro {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #dc3545;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  font-weight: bold;
+}
+
+.popup-erro button {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ===================== */
+/*      MODO ESCURO      */
+/* ===================== */
+.dark-mode {
+  background-color: #040411 !important;
+  color: #F5F5F5 !important;
+}
+
+.dark-mode .card,
+.dark-mode .list-group-item {
+  background-color: #373330 !important;
+  color: #F5F5F5 !important;
+}
+
+.dark-mode input,
+.dark-mode .form-control {
+  background-color: #2a2a2a;
+  color: #F5F5F5;
+  border: 1px solid #CCCCCC;
+}
+
+.dark-mode input::placeholder {
+  color: #BBBBBB;
+}
+
+.dark-mode label {
+  color: #F5F5F5 !important;
+}
+
+.dark-mode .btn-primary,
+.dark-mode .btn-warning {
+  background-color: #FFDC2B;
+  color: #040411;
+}
+
+.dark-mode .btn-danger {
+  background-color: #8E8C8B;
+}
+
+.dark-mode .popup-erro {
+  background-color: #bb2d3b;
+}
